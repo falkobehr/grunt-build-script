@@ -23,7 +23,8 @@
   "url": {
     "development": "http://dev.website.de/",
     "staging": "http://stage.website.de/",
-    "production": "http://prod.website.de/"
+    "production": "http://prod.website.de/",
+    "host": "host"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

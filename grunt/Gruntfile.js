@@ -17,6 +17,7 @@ module.exports = function( grunt ) {
         banner: "/*! <%= pkg.name %> - v<%= pkg.version %> - " +
                 "<%= grunt.template.today('yyyy-mm-dd hh:mm:ss') %> - " +
                 "Copyright <%= pkg.author.name %>, <%= pkg.author.url %> */",
+        host: "<%= pkg.url.host %>",
         clean: {
             tmp: [ ".tmp" ],
             dev: [ "**/.DS_Store*" ],
@@ -142,7 +143,7 @@ module.exports = function( grunt ) {
                     to: "//alert(."
                 } ]
             },
-            debug: {
+            excludes: {
                 src: [ "<%= pkg.path.dist %>/<%= pkg.path.src.index %>" ],
                 dest: [ "<%= pkg.path.dist %>/<%= pkg.path.src.index %>" ],
                 replacements: [ {
@@ -234,7 +235,7 @@ module.exports = function( grunt ) {
         "ftp-deploy": {
             css: {
                 auth: {
-                    host: "100264.webhosting36.1blu.de",
+                    host: "host",
                     port: 21,
                     authKey: "development"
                 },
@@ -249,7 +250,7 @@ module.exports = function( grunt ) {
             },
             prod: {
                 auth: {
-                    host: "100264.webhosting36.1blu.de",
+                    host: "",
                     port: 21,
                     authKey: "production"
                 },
@@ -384,7 +385,7 @@ module.exports = function( grunt ) {
                 "clean:dist",
                 "copy:dist",
                 "sass:dist",
-                "replace:debug",
+                "replace:excludes",
                 "useminPrepare",
                 "concat",
                 "replace:logs",
