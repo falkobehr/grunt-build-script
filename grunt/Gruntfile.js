@@ -17,7 +17,6 @@ module.exports = function( grunt ) {
         banner: "/*! <%= pkg.name %> - v<%= pkg.version %> - " +
                 "<%= grunt.template.today('yyyy-mm-dd hh:mm:ss') %> - " +
                 "Copyright <%= pkg.author.name %>, <%= pkg.author.url %> */",
-        host: "<%= pkg.url.host %>",
         clean: {
             tmp: [ ".tmp" ],
             dev: [ "**/.DS_Store*" ],
@@ -235,7 +234,7 @@ module.exports = function( grunt ) {
         "ftp-deploy": {
             css: {
                 auth: {
-                    host: "host",
+                    host: "<%= pkg.url.host %>",
                     port: 21,
                     authKey: "development"
                 },
