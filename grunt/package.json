@@ -1,0 +1,58 @@
+{
+  "name": "grunt-build-script",
+  "description": "A modern grunt build script",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Falko Behr",
+    "email": "hello@falkonien.de",
+    "url": "http://falkonien.de/"
+  },
+  "path": {
+    "dev": "app",
+    "dist": "dist",
+    "prod": "prod",
+    "src": {
+      "index": "index.html",
+      "js": "scripts",
+      "css": "styles",
+      "sass": "styles/components",
+      "images": "images"
+    }
+  },
+  "url": {
+    "development": "http://dev.website.de/",
+    "staging": "http://stage.website.de/",
+    "production": "http://prod.website.de/"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-compass": "^0.3.9",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-imagemin": "^0.7.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.5.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ftp-deploy": "^0.1.4",
+    "grunt-html-validation": "^0.1.18",
+    "grunt-humans-txt": "^0.2.1",
+    "grunt-jscs-checker": "^0.6.2",
+    "grunt-json-minify": "^0.4.0",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-notify": "^0.3.0",
+    "grunt-phplint": "0.0.5",
+    "grunt-sass-format": "0.0.6",
+    "grunt-text-replace": "^0.3.12",
+    "grunt-usemin": "^2.3.0",
+    "grunt-yslow": "0.0.4",
+    "jshint-stylish": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0",
+    "time-grunt": "^0.4.0"
+  }
+}
