@@ -1,7 +1,7 @@
 {
   "name": "grunt-build-script",
   "description": "A modern grunt build script",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "Falko Behr",

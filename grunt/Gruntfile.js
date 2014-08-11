@@ -110,7 +110,7 @@ module.exports = function( grunt ) {
             files: [
                 "Gruntfile.js",
                 "<%= pkg.path.dev %>/data/*.json",
-                "<%= pkg.path.dev %>/<%= pkg.path.src.js %>/*.js",
+                "<%= pkg.path.dev %>/<%= pkg.path.src.js %>/**/*.js",
                 "!<%= pkg.path.dev %>/<%= pkg.path.src.js %>/libs/*"
             ],
             options: {
@@ -147,6 +147,12 @@ module.exports = function( grunt ) {
                 dest: [ "<%= pkg.path.dist %>/<%= pkg.path.src.index %>" ],
                 replacements: [ {
                     from: /<script[^>]*exclude><\/script>/gi,
+                    to: ""
+                }, {
+                    from: /<link rel="[^>]*exclude\/>/gi,
+                    to: ""
+                }, {
+                    from: /<styles[^>]*exclude><\/styles>/gi,
                     to: ""
                 } ]
             },
@@ -287,11 +293,11 @@ module.exports = function( grunt ) {
                 spawnLimit: 10
             },
             all: [
-                "app/**/*.php"
+                "<%= pkg.path.dev %>/**/*.php"
             ]
         },
         jsonlint: {
-            src: [ "app/**/*.json" ]
+            src: [ "<%= pkg.path.dev %>/**/*.json" ]
         },
         "json-minify": {
             dist: {
@@ -408,7 +414,7 @@ module.exports = function( grunt ) {
                 "clean:dist",
                 "copy:prod",
                 "sass:dist",
-                "replace:debug",
+                "replace:excludes",
                 "useminPrepare",
                 "concat",
                 "replace:logs",
