@@ -7,7 +7,6 @@ npm install grunt-cli --save-dev
 
 npm install grunt-contrib-clean --save-dev
 npm install grunt-contrib-concat --save-dev
-npm install grunt-contrib-connect --save-dev
 npm install grunt-contrib-copy --save-dev
 npm install grunt-contrib-htmlmin --save-dev
 npm install grunt-contrib-imagemin --save-dev

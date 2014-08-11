@@ -1,12 +1,16 @@
 {
   "name": "grunt-build-script",
   "description": "A modern grunt build script",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": {
     "name": "Falko Behr",
     "email": "hello@falkonien.de",
     "url": "http://falkonien.de/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/falkobehr/grunt-build-script.git"
   },
   "path": {
     "dev": "app",
@@ -32,7 +36,6 @@
     "grunt-compass": "^0.3.9",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-contrib-imagemin": "^0.7.1",
