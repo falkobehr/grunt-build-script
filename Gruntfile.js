@@ -272,7 +272,8 @@ module.exports = function( grunt ) {
             options: {
                 relaxerror: [
                     "Bad value X-UA-Compatible for attribute http-equiv on element meta.",
-                    "document type does not allow element \"SCRIPT\" here"
+                    "document type does not allow element \"SCRIPT\" here",
+                    "Attribute exclude not allowed on element script at this point."
                 ],
                 reset: false,
                 stoponerror: true
@@ -330,8 +331,8 @@ module.exports = function( grunt ) {
                     "jshint",
                     "jscs",
                     "sassFormat",
-                    "sass:dev",
-                    "ftp-deploy:css"
+                    "sass:dev"
+                    //"ftp-deploy:css"
                 ]
             }
         },
