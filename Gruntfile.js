@@ -5,7 +5,6 @@
  *
  */
 
-
 /* jshint node:true */
 
 module.exports = function( grunt ) {
@@ -352,8 +351,6 @@ module.exports = function( grunt ) {
             }
         }
     });
-
-    grunt.file.setBase( "../" );
 
     grunt.registerTask( "speed", [
         "yslow"
